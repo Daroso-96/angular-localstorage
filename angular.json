@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "localstorage-prueba"
+  "defaultProject": "localstorage-prueba",
+  "cli": {
+    "analytics": "463746de-5952-4b12-b7cb-021fef813d46"
+  }
 }

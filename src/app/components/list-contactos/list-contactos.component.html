@@ -1,0 +1,27 @@
+<div class="container">
+   <h3 class="ml-3">Mis contactos</h3>
+   <div class="col-md-12">
+       <div class="row">
+           <div class="col-md-4 mt-4" *ngFor="let contacto of myContactos; let i = index">
+             <div class="card">
+                 <div class="card-body">
+                     <p class="card-tex">{{contacto.id}}</p>
+                     <p class="card-tex">{{contacto.nombre}}</p>
+                     <p class="card-tex">{{contacto.direccion}}</p>
+                     <p class="card-tex">{{contacto.celular}}</p>
+                     <p class="card-tex">{{contacto.fecha}}</p>
+                     <hr>
+                     <div class="row justify-content-between container">
+                     <div class="col-md-6">
+                         <button type="button" (click)="getPositions(contacto.id)" class="btn btn-warning" data-toggle="modal" data-target="#editModal">Editar</button>
+                     </div>
+                     <div class="col-md-6">
+                        <button type="button" class="btn btn-danger"(click)="deleteContacto(i)">Eliminar</button>
+                    </div>
+                     </div>
+                 </div>
+             </div>
+           </div>
+       </div>
+   </div>
+</div>

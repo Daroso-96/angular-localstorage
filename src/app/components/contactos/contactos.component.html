@@ -1,0 +1,39 @@
+<app-list-contactos (sendPosition)= "getPositions($event)"></app-list-contactos>
+<div class="modal fade mt-5 pt-5" id="editModal" tabindex="1" role="dialog"
+aria-label="editModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+ <div class="modal-content">
+     <div class="modal-header">
+         <h5 class="modal-title" id="editModalLabel">Editar Contactos</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+         </button>
+     </div>
+     <div class="modal-body">
+         <form action="">
+            <div class="form-group">
+                <input *ngIf="contactoFound" type="text" placeholder="Id" class="form-control"  [(ngModel)]="contactoFound.id">
+             </div>
+ 
+             <div class="form-group">
+                 <input *ngIf="contactoFound" type="text" placeholder="Nombre" class="form-control" [(ngModel)]="contactoFound.nombre">
+              </div>
+              <div class="form-group">
+                 <input *ngIf="contactoFound" type="text" placeholder="Direccion" class="form-control"[(ngModel)]="contactoFound.direccion">
+              </div>
+              <div class="form-group">
+                 <input *ngIf="contactoFound" type="text" placeholder="Celular" class="form-control" [(ngModel)]="contactoFound.celular" >
+              </div>
+              <div class="form-group">
+                 <input *ngIf="contactoFound" type="date" placeholder="Fecha" class="form-control" [(ngModel)]="contactoFound.fecha">
+              </div>
+         </form>
+     </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Actualizar</button>
+      </div>
+ </div>
+</div>
+    
+</div>
